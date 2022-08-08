@@ -1,0 +1,16 @@
+.flat-section {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -16px;
+    }
+    
+    &__item-wrap {
+        flex-basis: 100%;
+        padding: 16px;
+
+        @media (min-width: 480px) {
+            flex-basis: 50%;
+        }
+    }
+}

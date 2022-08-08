@@ -1,0 +1,30 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 1rem; /* 16px */
+    line-height: 1.5;
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    background-color: var(--color-background-primary);
+}
+
+main {
+    margin-top: 124px; /* header height */
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+::selection {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+}

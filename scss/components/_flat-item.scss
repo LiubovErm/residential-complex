@@ -1,0 +1,48 @@
+.flat-item {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(180deg, transparent 0%, var(--color-background-primary) 100%);
+        content: '';
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__name {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 2rem;
+        display: block;
+
+        @media (min-width: 768px) {
+            bottom: 2.5rem;
+            left: 3rem;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1.5rem 2rem;
+        background-color: var(--color-background-primary);
+        transform: translateY(100%);
+        transition: transform 0.4s;
+        opacity: 0.8;
+        
+        .flat-item:hover & {
+            transform: translateY(0);
+        }
+    }
+}

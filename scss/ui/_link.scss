@@ -1,0 +1,12 @@
+.link {
+    padding: 8px 12px;
+    color: var(--color-primary);
+    font-size: 14px;
+    line-height: 1.15;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--color-accent);
+        text-decoration: underline;
+    }
+}

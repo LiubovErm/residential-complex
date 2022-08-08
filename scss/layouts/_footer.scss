@@ -1,0 +1,19 @@
+.footer {
+    padding: 48px 0;
+    background-color: var(--color-background-secondary);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-contacts {
+    font-style: normal;
+}

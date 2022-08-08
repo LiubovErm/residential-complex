@@ -1,0 +1,93 @@
+$hero-image-gradient: linear-gradient(180deg, var(--color-background-primary) 5%, rgba(36, 43, 51, 0.3) 50%, var(--color-background-primary) 90%);
+
+.hero-section {
+    background-color: var(--color-background-primary);
+    background-image: $hero-image-gradient, url('../assets/images/hero-background-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include for-pixel-ratio-2 {
+        background-image: $hero-image-gradient, url('../assets/images/hero-background-image@2x.jpg');
+    }
+
+    &__inner {
+        text-align: center;
+    }
+    
+    &__title {
+        margin-bottom: 100px;
+
+        @media (min-width: 480px) {
+            max-width: 556px;
+            margin: 0 auto 100px;
+        }
+    }
+    
+    &__mouse {
+        margin-bottom: 200px;
+        /* animation-name: bounce;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-delay: 0.5s;
+        animation-iteration-count: 2;
+        animation-direction: alternate; */
+        animation: bounce 3s linear infinite alternate;
+    }
+    
+    &__mouse:hover {
+        animation-play-state: paused;
+    }
+    
+    &__mouse-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: var(--color-accent);
+    }
+    
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+    
+    &__contact-link {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__contact-link + &__contact-link {
+        margin-top: 24px;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+            margin-left: 130px;
+        }
+    }
+    
+    &__contact-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
+        fill: var(--color-primary);
+    }
+    
+    &__contact-link:hover &__contact-icon {
+        fill: var(--color-accent);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}

@@ -1,0 +1,42 @@
+.cta-section {
+    background-color: var(--color-background-primary);
+    background-image: url('../assets/images/cta-background-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &__inner {
+        @media (min-width: 1200px) {
+            display: flex;
+        }
+    }
+    
+    &__text {
+        margin-bottom: 48px;
+
+        @media (min-width: 1200px) {
+            max-width: 28rem;
+            margin-bottom: 0;
+            margin-right: 4rem;
+        }
+    }
+    
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    
+    &__form-field {
+        flex-basis: 100%;
+
+        @media (min-width: 768px) {
+            flex-basis: calc(50% - 0.75rem);
+        }
+    }
+
+    &__button {
+        align-self: flex-end;
+    }
+}
